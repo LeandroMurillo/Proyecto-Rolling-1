@@ -2,37 +2,31 @@ body {
     
     font-family: Arial, sans-serif;
     background-color: #eeeeee;
-
     
   }
 
   .container{
     display: flex;
+    gap: 10px;
   }
-  
-  /* Estilos para pantallas grandes */
-  @media (min-width: 768px) {
-    .container {
-      display: flex ;
-      flex-direction: row; /* Coloca el contenido y la publicidad en columnas */
 
-    }
-  
-    .content {
-      flex: 3; /* La columna de contenido toma más espacio */
-    }
-  
-    .advertisement {
-      flex: 1; /* La columna de publicidad toma menos espacio */
-      margin-top: 0;
-      margin-left: 20px;
-    }
+  .publicidad{
+    padding-top: 100px;
   }
   
-  /* Ocultar la columna de publicidad en pantallas pequeñas */
-  @media (max-width: 767px) {
-    .advertisement {
+ /* Ocultar columna de publicidad en modo móvil */
+@media (max-width: 767px) {
+  .publicidad {
       display: none;
-    }
   }
+}
+
+/* Alinear tarjetas en una sola columna en modo móvil */
+@media (max-width: 767px) {
+  .card-container .col {
+      flex: 0 0 100%; /* Forzar a que cada tarjeta ocupe todo el ancho */
+      max-width: 100%;
+  }
+}
+
   
