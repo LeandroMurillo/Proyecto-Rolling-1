@@ -28,80 +28,104 @@
         <div class="row">
           
             <div class="col-sm-3"> <!-- Columna del formulario -->
-            <!-- Formulario vertical -->
-            <section id="formulario">
+      
+            <!-- Botón para desplegar el formulario en modo móvil -->
+            <div class="d-md-none mb-3">
+                <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#formulario" aria-expanded="false" aria-controls="formulario">
+                    Buscar
+                </button>
+            </div>
 
-                  <div>
-                    <label for="customRange1" class="form-label5">Ordenar por</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Ordenar por</option>
-                    <option value="1">Mayor precio</option>
-                    <option value="2">Menor precio</option>
-                    <option value="5">Mas visitados</option>
-                    <option value="6">Menos visitados</option>
-                  </select>
+            <!-- Formulario -->
+            <section id="formulario" class="collapse d-md-block"> <!-- Oculto en móvil, visible en desktop -->
+                <div>
+                    <label for="form-select" class="form-label">Ordenar por</label>
+                    <select class="form-select" onchange="toggleProviderType()">
+                        <option value="" selected disabled hidden>Seleccionar</option>
+                        <option value="1">Mayor precio</option>
+                        <option value="2">Menor precio</option>
+                        <option value="3">Mas visitados</option>
+                        <option value="4">Menos visitados</option>
+                    </select>
                 </div>
-        
+                
                 <br>
-        
-                  <div>
+                
+                <div>
                     <fieldset>Tipos de viaje</fieldset>
                     <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="option1" aria-label="..."/>
                     <label class="form-check-label" for="inlineRadio1">Playa</label>
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="option2" aria-label="..."/>
                     <label class="form-check-label" for="inlineRadio2">Ciudad</label>
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="option2" aria-label="..."/>
                     <label class="form-check-label" for="inlineRadio2">Montaña</label>
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="option2" aria-label="..."/>
                     <label class="form-check-label" for="inlineRadio2">Lago</label>
-                  </div>
+                </div>
+                
+                <br>
+                
+                <div>  
+                    <label for="customRange1" class="form-label">Precio</label> 
+                </div>
+                
+                <div id="price-slider"></div> <!-- Slider doble -->
+                
+                <p>Rango seleccionado: <span id="price-output"></span></p>
+                
+                <script src="https://cdn.jsdelivr.net/npm/nouislider@15.4.0/distribute/nouislider.min.js"></script>
+                <script>
+                    var slider = document.getElementById('price-slider');
+            
+                    noUiSlider.create(slider, {
+                        start: [100, 500],
+                        connect: true,
+                        range: {
+                            'min': 0,
+                            'max': 1000
+                        },
+                        step: 50
+                    });
+            
+                    var priceOutput = document.getElementById('price-output');
+                    slider.noUiSlider.on('update', function(values, handle) {
+                        priceOutput.innerHTML = "$" + values.join(' - $');
+                    });
+                </script>
         
-                  <br>
-        
-                  <div>  
-        
-                  <label for="customRange1" class="form-label">Precio</label> 
-        
-                  </div>
-                  
-                  <div id="price-slider"></div><!-- Slider doble -->
-        
-                  <p>Rango seleccionado: <span id="price-output"></span></p>
-        
-                  <script>
-                      var slider = document.getElementById('price-slider');
-          
-                      noUiSlider.create(slider, {
-                          start: [100, 500], // Valores iniciales del rango
-                          connect: true,
-                          range: {
-                              'min': 0,
-                              'max': 1000
-                          },
-                          step: 50
-                      });
-          
-                      var priceOutput = document.getElementById('price-output');
-                      slider.noUiSlider.on('update', function(values, handle) {
-                          priceOutput.innerHTML = "$" + values.join(' - $');
-                      });
-                  </script>
-                  
-                  <button type="button" class="btn btn-primary">Reiniciar</button>
-                  
+                <button type="button" class="btn btn-primary">Reiniciar</button>
             </section>
+
+            <div class="col"d-md-block> <!-- Clumna de publicidad -->
+                <div class="publicidad">
+                <h2>Publicidad</h2>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6367138516509812"
+                    crossorigin="anonymous"></script>
+                <!-- Anuncio grafico -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-6367138516509812"
+                    data-ad-slot="6290740518"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                </div>
             </div>
 
-            <div class="col-sm-9">
+            </div>
+
+            <div class="col-sm-9"> <!-- Columna de las tarjetas -->
                 <div class="row">
                     
-                    <div class="col-8 col-sm-6">
+                    <div class="col-8 col-sm-12">
 
                         <div class="container text-center"> <!-- Contenedor de todas las tarjetas -->
                             <div class="row"> <!-- Fila 1 -->
@@ -328,26 +352,6 @@
             </div>
         </div>
 
-        <div class="col-4 col-sm-6">
-
-            <div class="col"> <!-- Clumna de publicidad -->
-                <h2>Publicidad</h2>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6367138516509812"
-                    crossorigin="anonymous"></script>
-                <!-- Anuncio grafico -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-6367138516509812"
-                    data-ad-slot="6290740518"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-    
-            </div>
-
-        </div>
 
     </div>
 
