@@ -1,76 +1,141 @@
 body {
-  
+    
     font-family: Arial, sans-serif;
     background-color: #eeeeee;
     
   }
 
   .container{
-    
-    gap: 10px;
+    display: flex;
+    flex-direction: column; /* Disposición vertical */
+    gap: 30px; /* Espacio entre las tarjetas */
   }
 
-  .publicidad{
-    padding-top: 100px;
+  .container2{
+    background-color: #ffffff;
+
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel-inner img {
+    width: 100%;           /* Ocupa todo el ancho del contenedor */
+    height: 500px;         /* Ajusta esta altura según el tamaño deseado */
+    object-fit: cover;     /* Recorta la imagen para que se ajuste al tamaño sin distorsionar */
+}
+
+.grilla{
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+   /* espacio entre filas y columnas */
+  grid-auto-rows: minmax(100px,auto);
+
+}
+
+.uno{
+
+  grid-column: 1;
+  grid-row: 1;
+
+  display: flex;
+
+  justify-content:space-between; /* Centrado horizontal */
+  align-items:center; /* Centrado vertical */
+}
+
+#uno_uno{
+
+  grid-column: 1;
+  grid-row: 1;
+
+  display: flex;
+  
+  justify-content:center; /* Centrado horizontal */
+ 
+}
+
+#uno_dos{
+ 
+  grid-column: 2;
+  grid-row: 1;
+  
+  display: flex;
+  
+  justify-content:center; /* Centrado horizontal */
+}
+
+#uno_tres{
+
+  grid-column: 3;
+  grid-row: 1;
+
+  display: flex;
+ 
+  justify-content:center; /* Centrado horizontal */
+}
+
+#dos_uno{
+
+  grid-column: 1;
+  grid-row: 2;
+
+  display: flex;
+  
+  justify-content:center; /* Centrado horizontal */
+
+}
+
+#dos_dos{
+
+  grid-column: 2;
+  grid-row: 2;
+  
+  display: flex;
+  
+  justify-content:center; /* Centrado horizontal */
+}
+
+#dos_tres{
+
+  grid-column: 3;
+  grid-row: 2;
+  
+  display: flex;
+  
+  justify-content:center; /* Centrado horizontal */
+}
+
+.dos{
+
+  grid-column: 3;
+  grid-row: 1;
+  text-align: center;
+}
+
+  
+  /* Estilos para pantallas grandes */
+  @media (min-width: 768px) {
+    .main-container {
+      flex-direction: row; /* Coloca el contenido y la publicidad en columnas */
+    }
+  
+    .content {
+      flex: 3; /* La columna de contenido toma más espacio */
+    }
+  
+    .advertisement {
+      flex: 1; /* La columna de publicidad toma menos espacio */
+      margin-top: 0;
+      margin-left: 20px;
+    }
   }
   
- /* Ocultar columna de publicidad en modo móvil */
-@media (max-width: 767px) {
-  .publicidad {
+  /* Ocultar la columna de publicidad en pantallas pequeñas */
+  @media (max-width: 767px) {
+    .advertisement {
       display: none;
+    }
   }
-}
-
-/* Alinear tarjetas en una sola columna en modo móvil */
-@media (max-width: 767px) {
-  .card-container .col {
-      flex: 0 0 100%; /* Forzar a que cada tarjeta ocupe todo el ancho */
-      max-width: 100%;
-  }
-}
-
-/* NAVBAR CSS */
-
-/* Asegúrate de que los elementos del navbar estén correctamente alineados */
-.navbar-nav {
-  align-items: center;
-}
-
-.form-control {
-  max-width: 300px; /* Ajusta el ancho del input de búsqueda */ 
-}
-
-.navbar-brand { 
-  font-weight: bold;
-} 
-
-.nav-link {
-  font-size: 1em;
-  color: darkblue; /* Color inicial del texto */ 
-}
-
-.nav-link:hover {
-  color: blue !important; /* Color del texto al pasar el ratón */
-  background-color: lightblue; /* Color de fondo al pasar el ratón*/
-}  
-
-.btn-outline-success {
-  color: #fff;
-  border-color: lightblue;
-} 
-
-.btn-outline-success:hover {
-  color: #fff;
-  background-color: lightblue;
-  border-color: lightblue;
-} 
-
-.btn-search {
-  color: darkblue; /* Color inicial del texto */
- } 
-
-.btn-search:hover {
-  color: blue !important; /* Color del texto al pasar el ratón */
- background-color: lightblue; /* Color de fondo al pasar el ratón */
-} 
-
+  
