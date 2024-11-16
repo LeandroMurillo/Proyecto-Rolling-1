@@ -1,15 +1,12 @@
 body {
   
-    margin: 0;
-    padding: 0;
-    width: 100%;
     font-family: Arial, sans-serif;
     background-color: #eeeeee;
     
   }
 
   .container{
-    display: flex;
+    
     gap: 10px;
   }
 
