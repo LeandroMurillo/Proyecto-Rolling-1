@@ -1,0 +1,45 @@
+/* NAVBAR CSS */
+
+/* Asegúrate de que los elementos del navbar estén correctamente alineados */
+.navbar-nav {
+   align-items: center;
+ }
+ 
+ .form-control {
+   max-width: 300px; /* Ajusta el ancho del input de búsqueda */ 
+ }
+ 
+ .navbar-brand { 
+   font-weight: bold;
+ } 
+ 
+ .nav-link {
+   font-size: 1em;
+   color: darkblue; /* Color inicial del texto */ 
+ }
+ 
+ .nav-link:hover {
+   color: blue !important; /* Color del texto al pasar el ratón */
+   background-color: lightblue; /* Color de fondo al pasar el ratón*/
+ }  
+ 
+ .btn-outline-success {
+   color: #fff;
+   border-color: lightblue;
+ } 
+ 
+ .btn-outline-success:hover {
+   color: #fff;
+   background-color: lightblue !important ;
+   border-color: lightblue !important;
+ } 
+ 
+ .btn-search {
+   color: darkblue; /* Color inicial del texto */
+  } 
+ 
+ .btn-search:hover {
+   color: blue !important; /* Color del texto al pasar el ratón */
+  background-color: lightblue; /* Color de fondo al pasar el ratón */
+ } 
+ 
