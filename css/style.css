@@ -5,6 +5,10 @@ body {
     
   }
 
+  main{
+    margin-top: 2%;
+  }
+
   .container{
     
     gap: 10px;
