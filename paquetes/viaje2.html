@@ -8,8 +8,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../style.css">
-
+    <link rel="stylesheet" href="../css/viaje.css">
+    
     <!-- Script de publicidad de google -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6367138516509812" crossorigin="anonymous"></script> 
     <meta name="google-adsense-account" content="ca-pub-6367138516509812">
@@ -17,6 +17,47 @@
     <title>TucTurismo</title>
 </head>
 <body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"><img src="../assets/Logo.svg" alt="logoNav" width="50" height="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../sobrenosotros.html">Acerca de Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex mx-auto">
+                    <input class="form-control me-2" type="search" placeholder="Buscar productos"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success text-dark" type="submit">Buscar</button>
+                </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../login.html"><i class="fas fa-user"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../registro.html"><i class="fa-solid fa-registered"></i> Crear Cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../carrito.html"><i class="fas fa-shopping-cart"></i> Carrito</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  </header>
+
+<main>
   <div class="container">
     
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"> <!-- Slide de imagenes -->
@@ -62,29 +103,36 @@
           </div>
         </div>
 
-        <div class="container text-center"> <!-- contenedor de lo que incluye cada viaje-->
-          <div class="row row-cols-auto d-flex justify-content-center"> <!-- Fila 1 -->
-            <div class="col d-flex justify-content-center align-items-center" style="width: 10%; height: 10%;">
-              <i class="fa-solid fa-ticket"></i>
+        <div class="grilla">
+
+          <div class="uno">
+
+            <div>
+              <div id="uno_uno"><i class="fa-solid fa-ticket"></i></div>
+              <div id="dos_uno"><p>¡Voucher electrónico!</p></div>
             </div>
-            <div class="col d-flex justify-content-center align-items-center" style="width: 10%; height: 10%;">
-              <i class="fa-solid fa-person"></i>
+            
+          
+            <div>
+              <div id="uno_dos"><i class="fa-solid fa-person"></i> </div>
+              <div id="dos_dos"><p>Guía</p></div>
             </div>
-            <div class="col d-flex justify-content-center align-items-center" style="width: 10%; height: 10%;">
-              <i class="fa-solid fa-utensils"></i>
+
+            <div>
+              <div id="uno_tres"><i class="fa-solid fa-utensils"></i></div>
+              <div id="dos_tres"><p>Comida</p></div>
             </div>
+          
           </div>
-          <div class="row row-cols-auto d-flex justify-content-center"> <!-- Fila 2 -->
-            <div class="col d-flex justify-content-center align-items-center" style="width: 10%; height: 10%;">
-              ¡Voucher electrónico!
-            </div>
-            <div class="col d-flex justify-content-center align-items-center" style="width: 10%; height: 10%;">
-              Guía
-            </div>
-            <div class="col d-flex justify-content-center align-items-center" style="width: 10%; height: 10%;">
-              Comida
-            </div>
+          
+
+          <div class="dos">
+            <div class="col"><h3> Precio por Adulto </h3><p>$1.097.242</p> <p>Incluye impuestos y tasas</p> 
+            <p><div class="card-body">
+            <a class="btn btn-primary rounded-pill btn-md" href="./paquetes/viaje1.html" role="button">Comprar</a>
+            </div></p></div>
           </div>
+  
         </div>
 
       </section>
@@ -166,6 +214,8 @@
     </div>
 
   </div>
+</main>
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
