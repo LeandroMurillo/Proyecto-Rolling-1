@@ -23,6 +23,10 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
 
+  .incluido{
+    margin-top: 5%;
+  }
+
   .carousel-inner img {
     width: 100%;           /* Ocupa todo el ancho del contenedor */
     height: 500px;         /* Ajusta esta altura según el tamaño deseado */
