@@ -14,6 +14,13 @@ body {
     gap: 10px;
   }
 
+footer{
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    
+}
+
   .publicidad{
     padding-top: 100px;
   }

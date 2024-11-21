@@ -8,3 +8,10 @@ uso esta clase para definir este tamaño de letra */
 .bs_fs-14{
     font-size: 14px;
 }
+
+footer{
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    
+}
